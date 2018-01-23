@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Clapiel Catalog 2</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/custom_style.css" rel="stylesheet">
+  <style>
+    .img_intro{
+      position:absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+    }
+    .img_intro.top{
+      z-index: 1;
+    }
+    .img_intro.bottom{
+      z-index: 2;
+    }
+    .img_intro.left{
+      z-index: 3;
+    }
+    .img_intro.right{
+      z-index: 4;
+    }
+    .img_intro.band{
+      z-index: 10;
+    }
+    .img_intro.center{
+      z-index: 20;
+    }
+    .img_intro_place{
+      position:relative;
+      height:100%;
+      width:100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="img_intro top">
+    <img class="img_intro_place" src="image/index/top.png"></img>
+  </div>
+  <div class="img_intro bottom">
+    <img class="img_intro_place" src="image/index/bottom.png"></img>
+  </div>
+  <div class="img_intro left">
+    <img class="img_intro_place" src="image/index/left.png"></img>
+  </div>
+  <div class="img_intro right">
+    <img class="img_intro_place" src="image/index/right.png"></img>
+  </div>
+  <div class="img_intro band">
+    <img class="img_intro_place" src="image/index/band.png"></img>
+  </div>
+  <div class="img_intro center">
+    <img class="img_intro_place" src="image/index/center.png"></img>
+  </div>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src = "vendor/jquery/jquery-ui.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("body").fadeIn('fast');
+
+      setTimeout(function() {
+       $('.img_intro.center').effect('shake', { times: 1 }, 200);
+      }, 1000);
+
+      setTimeout(function() {
+       $('.img_intro.top').hide('drop', { direction: 'up' }, 'slow');
+      }, 1500);
+
+      setTimeout(function() {
+       $('.img_intro.bottom').hide('drop', { direction: 'down' }, 'slow');
+      }, 1600);
+
+      setTimeout(function() {
+       $('.img_intro.left').hide('drop', { direction: 'left' }, 'slow');
+      }, 1700);
+
+      setTimeout(function() {
+       $('.img_intro.right').hide('drop', { direction: 'right' }, 'slow');
+      }, 1800);
+
+      setTimeout(function() {
+       $("body").fadeOut('fast', function(){
+         window.location = './main.html';
+       });
+      }, 2500);
+   });
+  </script>
+</body>
+
+</html>
