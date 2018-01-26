@@ -17,3 +17,9 @@ $('.burger-toggler').click(function () {
   $('.navbar').stop(true, true).fadeToggle();
   // $('.navbar').stop(true, true).slideToggle();
 });
+
+$('.carousel').carousel({
+  pause: true,
+  interval: false,
+	wrap: false
+});
